@@ -6,7 +6,7 @@ Autor: Eduardo Castellanos
 
 Descripci�n: WordSet. Interfaz para las implementaciones de clases que almacenar�n palabras.
 */
-package HojadeTrabajo8;
+package hojadetrabajo8;
 public interface WordSet {
 
 	public void add(Word wordObject);

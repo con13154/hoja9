@@ -6,7 +6,7 @@ Autor: Eduardo Castellanos
 
 Descripci�n: Word. Clase para almacenar las palabras junto con su tipo. 
 */
-package HojadeTrabajo8;
+package hojadetrabajo8;
 class Word implements Comparable<Word> {
 	private String word;
 	private String type;

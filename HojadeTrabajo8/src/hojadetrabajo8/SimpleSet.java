@@ -6,7 +6,7 @@ Autor: Eduardo Castellanos
 
 Descripci�n: SimpleSet ejemplo con ArrayList.
 */
-package HojadeTrabajo8;
+package hojadetrabajo8;
 import java.util.ArrayList;
 
 class SimpleSet implements WordSet

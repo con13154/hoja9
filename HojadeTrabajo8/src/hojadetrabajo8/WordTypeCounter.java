@@ -7,7 +7,7 @@ Autor: Eduardo Castellanos
 Descripci�n: Programa principal. 
 */
 
-package HojadeTrabajo8;
+package hojadetrabajo8;
 import java.io.*;
 
 class WordTypeCounter {

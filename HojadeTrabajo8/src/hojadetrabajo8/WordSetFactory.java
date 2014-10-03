@@ -6,7 +6,7 @@ Autor: Eduardo Castellanos
 
 Descripci�n: WordSetFactory. Clase  utilizada para instanciar los diferentes tipos de sets. 
 */
-package HojadeTrabajo8;
+package hojadetrabajo8;
 class WordSetFactory {
 	
 	// Metodo que genera un objeto que implementa WordSet
