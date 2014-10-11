@@ -4,11 +4,21 @@ Algoritmos y Estructuras de Datos - 2011
 Hoja de trabajo 7
 Autor: Eduardo Castellanos
 
-Descripci�n: Programa principal. 
+Descripción: Programa principal. 
+*/
+
+/*Modificado 10/10/2014
+
+Por: Isa Contreras 13154
+     Erick de Mata 13648
+     Luis Orellana 13140
+
+Implementacion de diferenetes estructuras de almacenamiento
 */
 
 package hojadetrabajo8;
 import java.io.*;
+import java.util.Scanner;
 
 class WordTypeCounter {
 	public static void main(String[] args) throws Exception
@@ -30,8 +40,11 @@ class WordTypeCounter {
 			//  3 Splay Tree
 			//  4 Hash Table
 			//  5 TreeMap (de java collection framework)
-			int implementacion = 4;
-			
+			int implementacion = 1;
+                        
+                        System.out.println("Selecciona la implementacion a utilizar \n 1.SimpleSet 2.RedBlackTree 3. SplayTres 4. HashTable 5. TreeMap:");
+                        Scanner ingreso = new Scanner (System.in);
+			implementacion = Integer.parseInt(ingreso.next());
 			BufferedReader wordreader;
 			BufferedReader textreader;
 			
@@ -52,7 +65,7 @@ class WordTypeCounter {
 					wordreader = new BufferedReader(new FileReader(wordFile));
 					textreader = new BufferedReader(new FileReader(textFile));
 				}
-				catch (Exception ex)
+				catch (FileNotFoundException ex)
 				{
 					System.out.println("Error al leer!");
 					return;
@@ -96,26 +109,34 @@ class WordTypeCounter {
 				{
 					// Separar todas las palabras en la l�nea.
 					textParts = line.split("[^\\w-]+"); // utilizar de separador cualquier caracter que no sea una letra, n�mero o gui�n.
-					
-					// Revisar cada palabra y verificar de que tipo es. 
-					for(int i=0;i<textParts.length;i++)
-					{
-						lookupword.setWord(textParts[i].trim().toLowerCase());
-						currentword = words.get(lookupword);
-						if(currentword != null)
-						{
-							if(currentword.getType().equals("v-d") || currentword.getType().equals("v") || currentword.getType().equals("q"))
-								verbs++;
-							else if(currentword.getType().equals("g") )
-								gerunds++;
-							else if(currentword.getType().equals("a-s") || currentword.getType().equals("a-c") || currentword.getType().equals("a"))
-								adjectives++;
-							else if(currentword.getType().equals("e"))
-								adverbs++;
-							else 
-								nouns++;
-						}
-					}
+                                    for (String textPart : textParts) {
+                                        lookupword.setWord(textPart.trim().toLowerCase());
+                                        currentword = words.get(lookupword);
+                                        if(currentword != null)
+                                        {
+                                            switch (currentword.getType()) {
+                                                case "v-d":
+                                                case "v":
+                                                case "q":
+                                                    verbs++;
+                                                    break;
+                                                case "g":
+                                                    gerunds++;
+                                                    break;
+                                                case "a-s":
+                                                case "a-c":
+                                                case "a":
+                                                    adjectives++;
+                                                    break;
+                                                case "e":
+                                                    adverbs++;
+                                                    break;
+                                                default:
+                                                    nouns++;
+                                                    break;
+                                            }
+                                        }
+                                    }
 					
 					line = textreader.readLine();
 				}
@@ -136,10 +157,5 @@ class WordTypeCounter {
 			{
 				System.out.println("No encuentro los archivos :'( ");
 			}
-		//}
-		//else
-		//{
-			//System.out.println("Faltan Parametros.");
-		//}
 	}
 }

@@ -1,34 +1,41 @@
 /*
-UVG
-Algoritmos y Estructuras de Datos - 2011
-Hoja de trabajo 7 
-Autor: Eduardo Castellanos
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-Descripci�n: WordSetFactory. Clase  utilizada para instanciar los diferentes tipos de sets. 
-*/
 package hojadetrabajo8;
+
+/*Modificado 10/10/2014
+
+Por: Isa Contreras 13154
+     Erick de Mata 13648
+     Luis Orellana 13140
+
+Implementacion de factory para las estructuras realziadas
+*/
 class WordSetFactory {
-	
-	// Metodo que genera un objeto que implementa WordSet
-	// parametro tipo: 1 = SimpleSet
-	//                         2 = implementado con Red black tree
-	//                         3 = implementado con Splay Tree
-	//                         4 = implementado con Hash Table
-	//                         5 = implementado con TreeMap (de Java Collection Framework)
-	
-	public static WordSet generateSet(int tipo)
+  	public static WordSet generateSet(int tipo)
 	{
-	    if (tipo == 1)
-		    return new SimpleSet();
-		else
-		    // aqui se regresara el set empleando sus implementaciones:
+        
+            // aqui se regresara el set empleando sus implementaciones:
 			// if tipo == 2 cree una instancia para un Wordset implementao con Red Black Tree
 			// if tipo == 3 cree una instancia para un Wordset implementado con Splay Tree
 			// if tipo == 4 cree una instancia para un Wordset implementado con Hash table
 			// if tipo == 5 cree una instancia para un Wordset implementado con TreeMap
-			
-                    return null; // modificarlo para que regrese la implementacion seleccionada
+           
+	    if (tipo == 1)
+		return new SimpleSet();
+            if(tipo == 2)
+                return new RedBlackTree();
+            if(tipo == 3)
+                return new SplayTree();
+            if(tipo == 4)
+                return new HashTable();
+            if(tipo == 5)
+                return new SetTreeMap();
+            else
+	
+            return null; // modificarlo para que regrese la implementacion seleccionada
 	}
-	
-	
 }
