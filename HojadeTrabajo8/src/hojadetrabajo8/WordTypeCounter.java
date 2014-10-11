@@ -17,7 +17,7 @@ class WordTypeCounter {
 		//{
 			// Declaraci�n e inicializaci�n de variables.
 			// el primer parametro indica el nombre del archivo con las definiciones de las palabras
-			File wordFile = new File("files//text1.txt");
+			File wordFile = new File("files//words.txt");
 			
 			// el segundo parametro indica el nombre del archivo que tiene el texto a analizar
 			File textFile = new File("files//text.txt");
