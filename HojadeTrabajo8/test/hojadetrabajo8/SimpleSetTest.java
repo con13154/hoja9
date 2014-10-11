@@ -25,21 +25,19 @@ public class SimpleSetTest {
     public SimpleSetTest() {
     }
     
-    
 
     /**
      * Test of get method, of class SimpleSet.
      */
     @Test
     public void testGet() {
-        System.out.println("get");
+        System.out.println("Método GET");
         Word word = null;
         SimpleSet instance = new SimpleSet();
         Word expResult = null;
         Word result = instance.get(word);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -47,12 +45,11 @@ public class SimpleSetTest {
      */
     @Test
     public void testAdd() {
-        System.out.println("add");
+        System.out.println("Método ADD");
         Word wordObject = null;
         SimpleSet instance = new SimpleSet();
         instance.add(wordObject);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
     }
     
 }
