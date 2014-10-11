@@ -30,7 +30,7 @@ class WordTypeCounter {
 			//  3 Splay Tree
 			//  4 Hash Table
 			//  5 TreeMap (de java collection framework)
-			int implementacion = 1;
+			int implementacion = 4;
 			
 			BufferedReader wordreader;
 			BufferedReader textreader;
